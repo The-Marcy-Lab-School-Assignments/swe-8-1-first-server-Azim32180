@@ -1,6 +1,28 @@
 const express = require("express");
 const app = express();
 
+// Middleware function for logging route requests
+const logRoutes = (req, res, next) => {
+  const time = new Date().toLocaleString();
+  console.log(`${req.method}: ${req.originalUrl} - ${time}`);
+  next(); // Passes the request to the next middleware/controller
+};
+// Register the logRoutes middleware globally to log all requests
+app.use(logRoutes);
+
+// Other endpoints and controllers
+
+// The path module is useful for constructing relative filepaths
+const path = require("path");
+// the filepath is to the entire assets folder
+const filepath = path.join(__dirname, "../vite-project/dist");
+// generate middleware using the filepath
+const serveStatic = express.static(filepath);
+// Register the serveStatic middleware before the remaining controllers
+app.use(serveStatic);
+
+// other controllers
+
 const servePicture = (req, res, next) => {
   const picture = [
     {
