@@ -1,6 +1,6 @@
 # Your First Server Application
 
-Deployment Link:
+Deployment Link: https://swe-8-1-first-server-azim32180.onrender.com
 
 - [Setup](#setup)
 - [Starter Code](#starter-code)
@@ -62,13 +62,13 @@ You got this!
 
 **Static Assets Requirements**
 
-- [ ] The root of the repository contains a Vite + React application. The folder containing the project is a sibling of `server`
-- [ ] The `path` module and `__dirname` are used to generate an absolute path to the `dist/` folder of your React application
-- [ ] The `express.static()` middleware serves the static assets in the React application's `dist/` folder.
+- [x] The root of the repository contains a Vite + React application. The folder containing the project is a sibling of `server`
+- [x] The `path` module and `__dirname` are used to generate an absolute path to the `dist/` folder of your React application
+- [x] The `express.static()` middleware serves the static assets in the React application's `dist/` folder.
 
 **Deployment Technical Requirements**
 
-- [ ] The project is deployed using Render and the link is listed at the top of this README.
+- [x] The project is deployed using Render and the link is listed at the top of this README.
 
 ## Part 1 — Server Setup
 
